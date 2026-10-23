@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliê da Andreia | Costura & Alta Costura</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Painel de Personalização de Cores -->
+    <div class="customizer-panel" id="customizerPanel">
+        <button class="customizer-toggle" id="customizerToggle" aria-label="Personalizar cores">
+            <i class="fa-solid fa-palette"></i>
+        </button>
+        <div class="customizer-content">
+            <h3>Customizar Cores</h3>
+            <div class="control-group">
+                <label for="primaryColor">Cor Principal:</label>
+                <input type="color" id="primaryColor" value="#8A2BE2">
+            </div>
+            <div class="control-group">
+                <label for="bgColor">Fundo Customizado:</label>
+                <input type="color" id="bgColor" value="#ffffff">
+            </div>
+            <div class="control-group">
+                <label for="textColor">Cor do Texto:</label>
+                <input type="color" id="textColor" value="#1a1a1a">
+            </div>
+            <button class="btn btn-reset" id="resetColors">Resetar</button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho (Navbar) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-scissors"></i> Ateliê da <span>Andreia</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#sobre" class="nav-link">Sobre Nós</a>
+                <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Fale Conosco</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Alta Costura & Ajustes Finos</span>
+                <h1>Elegância sob medida para os seus momentos <span class="highlight">inesquecíveis</span></h1>
+                <p>No Ateliê da Andreia, transformamos tecidos em sonhos. Roupas feitas sob medida, ajustes perfeitos e atendimento exclusivo com a delicadeza que você merece.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Agendar Atendimento</a>
+                    <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Serviços -->
+    <section id="servicos" class="services-section">
+        <div class="section-header">
+            <h2>Nossas Especialidades</h2>
+            <p>Trabalho artesanal com acabamento impecável e alta precisão.</p>
+        </div>
+        <div class="services-grid">
+            <a class="service-card" href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20ajustes%20e%20reformas." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre Ajustes e Reformas pelo WhatsApp">
+                <img class="service-image" src="assets/service-adjustments.svg" alt="Ilustração de uma máquina de costura fazendo ajustes em uma peça de roupa">
+                <div class="service-card-content">
+                    <h3>Ajustes e Reformas</h3>
+                    <p>Customização, barras, pence e ajustes finos em roupas masculinas e femininas.</p>
+                    <span class="service-card-action">Solicitar informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="service-card" href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20Moda%20Praia." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre Moda Praia pelo WhatsApp">
+                <img class="service-image" src="assets/service-beachwear.svg" alt="Ilustração de tecido e traje de banho sendo costurados">
+                <div class="service-card-content">
+                    <h3>Moda Praia</h3>
+                    <p>Peças de moda praia feitas sob medida para combinar conforto, estilo e caimento perfeito.</p>
+                    <span class="service-card-action">Solicitar informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </div>
+            </a>
+            <a class="service-card" href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20Lingerie." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre Lingerie pelo WhatsApp">
+                <img class="service-image" src="assets/service-lingerie.svg" alt="Ilustração delicada de lingerie com detalhes costurados">
+                <div class="service-card-content">
+                    <h3>Lingerie</h3>
+                    <p>Lingerie feita sob medida, com conforto, delicadeza e ótimo caimento.</p>
+                    <span class="service-card-action">Solicitar informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="about-section">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>Sobre o Ateliê da Andreia</h2>
+                <p>Com anos de experiência no mercado de costura, unimos dedicação, técnica e paixão para entregar peças com caimento perfeito. Cada cliente é única, e cada costura conta uma história de sofisticação e cuidado.</p>
+                <div class="about-features">
+                    <div class="feature-item"><i class="fa-solid fa-check"></i> Atendimento com hora marcada</div>
+                    <div class="feature-item"><i class="fa-solid fa-check"></i> Materiais de altíssima qualidade</div>
+                    <div class="feature-item"><i class="fa-solid fa-check"></i> Pontualidade na entrega</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Completo -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Ateliê da Andreia</h3>
+                <p>Sua referência em estilo, elegância e modelagens exclusivas.</p>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato & Endereço</h4>
+                <p><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> 11 98492-1848</p>
+                <p><i class="fa-solid fa-location-dot"></i> R. José pestana, 195 - JD. Maria Rosa</p>
+                <p><i class="fa-solid fa-map-pin"></i> <strong>CEP:</strong> 06763-200</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ateliê da Andreia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%21" class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
