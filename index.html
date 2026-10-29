@@ -1,159 +1,701 @@
-
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ateliê da Andreia | Costura & Alta Costura</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Ateliê de ajustes | Serviços de Costura sob Medida</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#fff1f5',
+                            100: '#ffe4ec',
+                            200: '#fecddc',
+                            300: '#fda4bf',
+                            400: '#fb719d',
+                            500: '#f9a8d4',
+                            600: '#f472b6',
+                            700: '#db6f98',
+                            800: '#9f1746',
+                            900: '#831843',
+                            950: '#500724',
+                        },
+                        gold: {
+                            300: '#fce7f3',
+                            400: '#fbcfe8',
+                            500: '#f9a8d4',
+                            600: '#be185d',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Cinzel', serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-rose-50 text-slate-800 dark:bg-navy-950 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-300">
 
-    <!-- Painel de Personalização de Cores -->
-    <div class="customizer-panel" id="customizerPanel">
-        <button class="customizer-toggle" id="customizerToggle" aria-label="Personalizar cores">
-            <i class="fa-solid fa-palette"></i>
-        </button>
-        <div class="customizer-content">
-            <h3>Customizar Cores</h3>
-            <div class="control-group">
-                <label for="primaryColor">Cor Principal:</label>
-                <input type="color" id="primaryColor" value="#8A2BE2">
-            </div>
-            <div class="control-group">
-                <label for="bgColor">Fundo Customizado:</label>
-                <input type="color" id="bgColor" value="#ffffff">
-            </div>
-            <div class="control-group">
-                <label for="textColor">Cor do Texto:</label>
-                <input type="color" id="textColor" value="#1a1a1a">
-            </div>
-            <button class="btn btn-reset" id="resetColors">Resetar</button>
-        </div>
+    <!-- BARRA SUPERIOR DE AVISO -->
+    <div class="bg-navy-900 text-slate-200 text-xs py-2 px-4 text-center tracking-widest font-medium border-b border-navy-800">
+        ✨ ATENDIMENTO IMEDIATO | SOLICITE SEU ORÇAMENTO ONLINE PELO WHATSAPP!
     </div>
 
-    <!-- Cabeçalho (Navbar) -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fa-solid fa-scissors"></i> Ateliê da <span>Andreia</span>
-            </a>
-            
-            <nav class="nav-menu" id="navMenu">
-                <a href="#inicio" class="nav-link active">Início</a>
-                <a href="#servicos" class="nav-link">Serviços</a>
-                <a href="#sobre" class="nav-link">Sobre Nós</a>
-                <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Fale Conosco</a>
-            </nav>
+    <!-- CABEÇALHO (HEADER) -->
+    <header class="sticky top-0 z-40 bg-white/90 dark:bg-navy-900/90 backdrop-blur-md border-b border-navy-100 dark:border-navy-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full bg-navy-900 text-gold-500 border border-gold-400/40 flex items-center justify-center text-xl shadow-md group-hover:bg-navy-800 transition">
+                        <i class="fa-solid fa-scissors"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-navy-900 dark:text-white uppercase">Ateliê da Andreia</span>
+                        <span class="text-[10px] tracking-[0.3em] text-gold-600 dark:text-gold-400 uppercase -mt-1 font-semibold">Ajustes & Reformas</span>
+                    </div>
+                </a>
 
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8 font-medium text-sm tracking-wide">
+                    <a href="#home" class="text-navy-900 dark:text-slate-100 hover:text-gold-500 transition">Início</a>
+                    <a href="#sobre-mim" class="text-slate-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-gold-400 transition">Sobre Mim</a>
+                    <a href="#catalogo" class="text-slate-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-gold-400 transition">Serviços & Peças</a>
+                    <a href="#como-funciona" class="text-slate-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-gold-400 transition">Como Funciona</a>
+                    <a href="#contato" class="text-slate-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-gold-400 transition">Contato</a>
+                </nav>
+
+                <!-- Ações do Header -->
+                <div class="flex items-center gap-3">
+                    <!-- Alternar Tema (Claro/Escuro) -->
+                    <button id="themeToggle" onclick="toggleTheme()" aria-label="Alternar Tema"
+                        class="p-2.5 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-navy-800 transition">
+                        <i id="themeIcon" class="fa-solid fa-moon text-lg"></i>
+                    </button>
+
+                    <!-- Botão CTA Agendamento -->
+                    <button onclick="openModal('Agendamento Geral')" class="hidden sm:flex bg-navy-900 hover:bg-navy-800 dark:bg-gold-500 dark:hover:bg-gold-400 text-white dark:text-navy-950 px-5 py-2.5 rounded-full font-semibold text-xs tracking-wider uppercase shadow-md transition items-center gap-2">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Agendar Horário</span>
+                    </button>
+
+                    <!-- Hamburguer Mobile -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-navy-900 dark:text-slate-100 text-xl focus:outline-none">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
+        </div>
+
+        <!-- Menu Mobile Nav Overlay -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-navy-900 border-b border-navy-100 dark:border-navy-800 px-6 py-5 space-y-4 shadow-xl">
+            <a href="#home" onclick="toggleMobileMenu()" class="block font-medium text-slate-800 dark:text-slate-200 hover:text-gold-500">Início</a>
+            <a href="#sobre-mim" onclick="toggleMobileMenu()" class="block font-medium text-slate-800 dark:text-slate-200 hover:text-gold-500">Sobre Mim</a>
+            <a href="#catalogo" onclick="toggleMobileMenu()" class="block font-medium text-slate-800 dark:text-slate-200 hover:text-gold-500">Serviços & Peças</a>
+            <a href="#como-funciona" onclick="toggleMobileMenu()" class="block font-medium text-slate-800 dark:text-slate-200 hover:text-gold-500">Como Funciona</a>
+            <a href="#contato" onclick="toggleMobileMenu()" class="block font-medium text-slate-800 dark:text-slate-200 hover:text-gold-500">Contato</a>
+            <button onclick="toggleMobileMenu(); openModal('Agendamento Geral')" class="w-full bg-navy-900 dark:bg-gold-500 text-white dark:text-navy-950 font-semibold py-3 rounded-xl text-xs uppercase tracking-wider">
+                Agendar Horário
+            </button>
         </div>
     </header>
 
-    <!-- Seção Principal (Hero) -->
-    <section id="inicio" class="hero-section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="hero-subtitle">Alta Costura & Ajustes Finos</span>
-                <h1>Elegância sob medida para os seus momentos <span class="highlight">inesquecíveis</span></h1>
-                <p>No Ateliê da Andreia, transformamos tecidos em sonhos. Roupas feitas sob medida, ajustes perfeitos e atendimento exclusivo com a delicadeza que você merece.</p>
-                <div class="hero-buttons">
-                    <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Agendar Atendimento</a>
-                    <a href="#servicos" class="btn btn-secondary">Ver Serviços</a>
+    <!-- CARROSSEL HERO PROMOCIONAL -->
+    <section id="home" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+        <div class="relative overflow-hidden rounded-3xl bg-navy-900 text-white min-h-[420px] sm:min-h-[500px] shadow-2xl flex items-center" id="heroCarouselContainer">
+            
+            <!-- Slides Container -->
+            <div id="carouselSlides" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
+                
+                <!-- Slide 1 -->
+                <div class="min-w-full relative flex flex-col md:flex-row items-center justify-between p-8 sm:p-14 lg:p-16 gap-8">
+                    <div class="z-10 max-w-2xl space-y-4 text-center md:text-left">
+                        <span class="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-400/30 text-xs font-semibold tracking-widest uppercase">
+                            <i class="fa-solid fa-crown mr-1"></i> Ajustes Exclusivos
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">Ajustes & Reformas para Cada Peça</h2>
+                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">Customização, barras, pence e retoques delicados para deixar suas roupas com o caimento perfeito e o visual renovado.</p>
+                        <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
+                            <button onclick="openModal('Ajustes e Reformas')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider">Solicitar Orçamento</button>
+                            <a href="#catalogo" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3 rounded-full transition text-xs uppercase tracking-wider">Ver Serviços</a>
+                        </div>
+                    </div>
+                    <div class="z-10 w-52 sm:w-72 lg:w-96 flex-shrink-0">
+                        <img src="IMG/carrosesel.jpeg" alt="Ajustes e reformas de roupas" class="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-2xl border border-white/10">
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="min-w-full relative flex flex-col md:flex-row items-center justify-between p-8 sm:p-14 lg:p-16 gap-8 bg-navy-950">
+                    <div class="z-10 max-w-2xl space-y-4 text-center md:text-left">
+                        <span class="inline-block px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/30 text-xs font-semibold tracking-widest uppercase">
+                            <i class="fa-solid fa-scissors mr-1"></i> Ajustes Impecáveis
+                        </span>
+                        <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">Reforma e Ajuste Fino de Roupas</h2>
+                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">Ajustes de barras, ternos, camisaria e renovação de peças especiais com técnicas tradicionais de costura alfaiataria.</p>
+                        <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
+                            <button onclick="openModal('Ajustes & Reformas')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider">Agendar Prova</button>
+                            <a href="#catalogo" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3 rounded-full transition text-xs uppercase tracking-wider">Ver Serviços</a>
+
+                            
+                        </div>
+                    </div>
+                    <div class="z-10 w-52 sm:w-72 lg:w-96 flex-shrink-0">
+                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Ateliê de Costura" class="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-2xl border border-white/10">
+
+            <!-- Botões Laterais -->
+            <button onclick="prevSlide()" aria-label="Slide Anterior" class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-navy-900 text-white flex items-center justify-center backdrop-blur-sm border border-white/20 transition z-20">
+                <i class="fa-solid fa-chevron-left text-sm"></i>
+            </button>
+            <button onclick="nextSlide()" aria-label="Próximo Slide" class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-navy-900 text-white flex items-center justify-center backdrop-blur-sm border border-white/20 transition z-20">
+                <i class="fa-solid fa-chevron-right text-sm"></i>
+            </button>
+
+            <!-- Indicadores Inferiores -->
+            <div id="carouselDots" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex space-x-2.5 z-20">
+                <button onclick="goToSlide(0)" class="w-8 h-2 rounded-full bg-gold-500 transition-all"></button>
+                <button onclick="goToSlide(1)" class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
+                <button onclick="goToSlide(2)" class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS DO ATELIÊ -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <div class="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-navy-900 border border-navy-100 dark:border-navy-800 shadow-sm">
+                <div class="p-3 bg-navy-50 dark:bg-navy-800 text-navy-900 dark:text-gold-400 rounded-xl"><i class="fa-solid fa-ruler-combined text-xl"></i></div>
+                <div>
+                    <h4 class="font-bold text-xs sm:text-sm">Bainhas Perfeitas</h4>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">Original, galão e invisível</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-navy-900 border border-navy-100 dark:border-navy-800 shadow-sm">
+                <div class="p-3 bg-navy-50 dark:bg-navy-800 text-navy-900 dark:text-gold-400 rounded-xl"><i class="fa-solid fa-scissors text-xl"></i></div>
+                <div>
+                    <h4 class="font-bold text-xs sm:text-sm">Troca de Zíper</h4>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">Invisíveis e reforçados</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-navy-900 border border-navy-100 dark:border-navy-800 shadow-sm">
+                <div class="p-3 bg-navy-50 dark:bg-navy-800 text-navy-900 dark:text-gold-400 rounded-xl"><i class="fa-solid fa-shirt text-xl"></i></div>
+                <div>
+                    <h4 class="font-bold text-xs sm:text-sm">Reformas Personalizadas</h4>
+                    <p class="text-[11px] text-slate-500 dark:text-slate-400">Ajustes finos e estruturais</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Serviços -->
-    <section id="servicos" class="services-section">
-        <div class="section-header">
-            <h2>Nossas Especialidades</h2>
-            <p>Trabalho artesanal com acabamento impecável e alta precisão.</p>
-        </div>
-        <div class="services-grid">
-            <a class="service-card" href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20ajustes%20e%20reformas." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre Ajustes e Reformas pelo WhatsApp">
-                <img class="service-image" src="assets/service-adjustments.svg" alt="Ilustração de uma máquina de costura fazendo ajustes em uma peça de roupa">
-                <div class="service-card-content">
-                    <h3>Ajustes e Reformas</h3>
-                    <p>Customização, barras, pence e ajustes finos em roupas masculinas e femininas.</p>
-                    <span class="service-card-action">Solicitar informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    <!-- SEÇÃO SOBRE MIM -->
+    <section id="sobre-mim" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="bg-gradient-to-br from-navy-900 to-navy-950 text-white rounded-3xl p-8 sm:p-14 border border-navy-800 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-white text-[220px] pointer-events-none">
+                <i class="fa-solid fa-scissors"></i>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+                <!-- Imagem da Costureira / Ateliê -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <img src="IMG/sobre mim.jpeg" alt="Andreia no ateliê" class="rounded-3xl shadow-2xl border-4 border-gold-500/30 object-cover h-[380px] w-full">
+                    </div>
                 </div>
-            </a>
-            <a class="service-card" href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20Moda%20Praia." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre Moda Praia pelo WhatsApp">
-                <img class="service-image" src="assets/service-beachwear.svg" alt="Ilustração de tecido e traje de banho sendo costurados">
-                <div class="service-card-content">
-                    <h3>Moda Praia</h3>
-                    <p>Peças de moda praia feitas sob medida para combinar conforto, estilo e caimento perfeito.</p>
-                    <span class="service-card-action">Solicitar informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+
+                <!-- Conteúdo Sobre Mim -->
+                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-400/30 text-xs font-semibold tracking-widest uppercase">
+                        <i class="fa-solid fa-heart mr-1"></i> A História por Trás das Agulhas
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Prazer, sou a sua costureira!</h2>
+                    
+                    <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+                        Cresci entre linhas, carretéis e o som suave da máquina de costura. Para mim, costurar nunca foi apenas unir tecidos — é sobre devolver a confiança, restaurar aquela peça afetiva e garantir que cada roupa se adapte perfeitamente ao seu corpo.
+                    </p>
+
+                    <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">
+                        Especializei-me em ajustes delicados, reformas estruturais de peças do dia a dia, substituição técnica de zíperes e barras com acabamentos finos. Cada ponto é feito com paciência, dedicação e extremo cuidado.
+                    </p>
+
+                    <div class="pt-3 grid grid-cols-3 gap-4 border-t border-navy-800/80 text-left">
+                        <div>
+                            <i class="fa-solid fa-check text-gold-400 text-sm mb-1"></i>
+                            <h4 class="text-xs font-bold text-white">Atendimento Humano</h4>
+                            <p class="text-[11px] text-slate-400">Escuta atenta ao cliente</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check text-gold-400 text-sm mb-1"></i>
+                            <h4 class="text-xs font-bold text-white">Precisão Técnica</h4>
+                            <p class="text-[11px] text-slate-400">Ponto a ponto perfeito</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check text-gold-400 text-sm mb-1"></i>
+                            <h4 class="text-xs font-bold text-white">Satisfação Garantida</h4>
+                            <p class="text-[11px] text-slate-400">Peça pronta para usar</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4">
+                        <button onclick="openModal('Atendimento Personalizado')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-6 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                            <span>Falar Comigo no WhatsApp</span>
+                        </button>
+                    </div>
                 </div>
-            </a>
-            <a class="service-card" href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20sobre%20Lingerie." target="_blank" rel="noopener noreferrer" aria-label="Consultar sobre Lingerie pelo WhatsApp">
-                <img class="service-image" src="assets/service-lingerie.svg" alt="Ilustração delicada de lingerie com detalhes costurados">
-                <div class="service-card-content">
-                    <h3>Lingerie</h3>
-                    <p>Lingerie feita sob medida, com conforto, delicadeza e ótimo caimento.</p>
-                    <span class="service-card-action">Solicitar informações <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-                </div>
-            </a>
+            </div>
         </div>
     </section>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <h2>Sobre o Ateliê da Andreia</h2>
-                <p>Com anos de experiência no mercado de costura, unimos dedicação, técnica e paixão para entregar peças com caimento perfeito. Cada cliente é única, e cada costura conta uma história de sofisticação e cuidado.</p>
-                <div class="about-features">
-                    <div class="feature-item"><i class="fa-solid fa-check"></i> Atendimento com hora marcada</div>
-                    <div class="feature-item"><i class="fa-solid fa-check"></i> Materiais de altíssima qualidade</div>
-                    <div class="feature-item"><i class="fa-solid fa-check"></i> Pontualidade na entrega</div>
+    <!-- CATÁLOGO DE PRODUTOS E SERVIÇOS -->
+    <section id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 dark:text-gold-400">Especialidades do Ateliê</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-navy-900 dark:text-white">Nossos Serviços</h2>
+            </div>
+
+            <!-- Filtros por Categoria -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-2 hide-scrollbar">
+                <button onclick="filterCategory('Todos')" class="category-btn active px-5 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 transition">Todos</button>
+                <button onclick="filterCategory('Bainhas')" class="category-btn px-5 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-navy-100 transition">✂️ Bainhas</button>
+                <button onclick="filterCategory('Zíperes')" class="category-btn px-5 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-navy-100 transition">🔩 Troca de Zíper</button>
+            </div>
+        </div>
+
+        <!-- Grid de Cards de Produtos/Serviços -->
+        <div id="catalogGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Inserido via JavaScript -->
+        </div>
+    </section>
+
+    <!-- SEÇÃO COMO FUNCIONA -->
+    <section id="como-funciona" class="bg-navy-900 text-white py-16 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-gold-400 text-xs font-bold tracking-widest uppercase">Passo a Passo</span>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold mt-1">Como Funciona o Atendimento</h2>
+                <p class="text-slate-300 text-sm mt-2 font-light">Do primeiro atendimento no WhatsApp até a entrega perfeita da sua peça.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Passo 1 -->
+                <div class="bg-navy-950/60 p-8 rounded-3xl border border-navy-800 text-center relative group hover:border-gold-500/50 transition duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-gold-500/20 text-gold-400 border border-gold-400/30 flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Passo 01</span>
+                    <h3 class="text-xl font-serif font-bold mt-2 mb-3">Agendamento & Consulta</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Agende seu horário online ou nos envie fotos da peça no WhatsApp para uma primeira avaliação sem compromisso.
+                    </p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="bg-navy-950/60 p-8 rounded-3xl border border-navy-800 text-center relative group hover:border-gold-500/50 transition duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-gold-500/20 text-gold-400 border border-gold-400/30 flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-tape"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widest">Passo 02</span>
+                    <h3 class="text-xl font-serif font-bold mt-2 mb-3">Medidas e Provas</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Realizamos a medição precisa no corpo para definir os ajustes exatos ou a criação do molde sob medida.
+                    </p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="bg-navy-950/60 p-8 rounded-3xl border border-navy-800 text-center relative group hover:border-gold-500/50 transition duration-300">
+                    <div class="w-16 h-16 rounded-2xl bg-gold-500/20 text-gold-400 border border-gold-400/30 flex items-center justify-center text-2xl mx-auto mb-5">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <span class="text-xs font-bold text-gold-400 uppercase tracking-widestPasso 03</span>
+                    <h3 class="text-xl font-serif font-bold mt-2 mb-3">Entrega Impecável</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Sua roupa passa por rigorosa revisão de costura profissional antes da entrega.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Rodapé Completo -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h3>Ateliê da Andreia</h3>
-                <p>Sua referência em estilo, elegância e modelagens exclusivas.</p>
-                <div class="social-links">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    <!-- MODAL DE ORÇAMENTO / AGENDAMENTO -->
+    <div id="serviceModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-white dark:bg-navy-900 w-full max-w-lg rounded-3xl shadow-2xl border border-navy-100 dark:border-navy-800 overflow-hidden transform transition-all">
+            
+            <!-- Modal Header -->
+            <div class="bg-navy-900 text-white p-6 flex justify-between items-center border-b border-navy-800">
+                <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-scissors text-gold-400 text-xl"></i>
+                    <h3 id="modalTitle" class="font-serif font-bold text-lg">Solicitar Orçamento</h3>
                 </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white transition text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
-            <div class="footer-contact">
-                <h4>Contato & Endereço</h4>
-                <p><i class="fa-solid fa-phone"></i> <strong>Telefone:</strong> 11 98492-1848</p>
-                <p><i class="fa-solid fa-location-dot"></i> R. José pestana, 195 - JD. Maria Rosa</p>
-                <p><i class="fa-solid fa-map-pin"></i> <strong>CEP:</strong> 06763-200</p>
-            </div>
+
+            <!-- Modal Form -->
+            <form id="appointmentForm" onsubmit="handleFormSubmit(event)" class="p-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Seu Nome Completo</label>
+                    <input type="text" id="clientName" required placeholder="Ex: Maria Silva" 
+                        class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-slate-800 dark:text-slate-100 text-xs outline-none focus:border-gold-500">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Telefone / WhatsApp</label>
+                        <input type="tel" id="clientPhone" required placeholder="(11) 99999-9999" 
+                            class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-slate-800 dark:text-slate-100 text-xs outline-none focus:border-gold-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Data Preferencial</label>
+                        <input type="date" id="clientDate" required 
+                            class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-slate-800 dark:text-slate-100 text-xs outline-none focus:border-gold-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">Detalhes da Peça / Serviço Desejado</label>
+                    <textarea id="clientDetails" rows="3" placeholder="Descreva o tipo de peça, se precisa de ajuste simples, confecção sob medida ou reforma..." 
+                        class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-navy-700 bg-slate-50 dark:bg-navy-950 text-slate-800 dark:text-slate-100 text-xs outline-none focus:border-gold-500"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs uppercase tracking-wider">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Enviar para o WhatsApp do Ateliê</span>
+                </button>
+            </form>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Ateliê da Andreia. Todos os direitos reservados.</p>
+    </div>
+
+    <!-- RODAPÉ (FOOTER) -->
+    <footer id="contato" class="bg-navy-950 text-slate-300 border-t border-navy-800 pt-12 pb-8 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-navy-800">
+                
+                <!-- Informações da Marca -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-navy-900 text-gold-400 border border-gold-400/40 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white uppercase tracking-wider">Ajustes</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Especialistas em ajustes finos, reformas de roupas e acabamentos impecáveis para dar novo caimento às suas peças.
+                    </p>
+                    
+                    <!-- Redes Sociais Clicáveis -->
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="https://www.instagram.com/mariaandreia-sil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Ateliê" 
+                            class="w-9 h-9 rounded-full bg-navy-900 hover:bg-gold-500 text-slate-300 hover:text-navy-950 flex items-center justify-center transition shadow-md">
+                            <i class="fa-brands fa-instagram text-base"></i>
+                        </a>
+                        <a href="https://www.facebook.com/MariaAndreiaSilva" target="_blank" rel="noopener noreferrer" aria-label="Facebook do Ateliê" 
+                            class="w-9 h-9 rounded-full bg-navy-900 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow-md">
+                            <i class="fa-brands fa-facebook-f text-base"></i>
+                        </a>
+                        <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Ateliê" 
+                            class="w-9 h-9 rounded-full bg-navy-900 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow-md">
+                            <i class="fa-brands fa-whatsapp text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div>
+                    <h4 class="font-serif text-white font-bold text-sm mb-4 tracking-wider uppercase">Navegação</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#home" class="hover:text-gold-400 transition">Início</a></li>
+                        <li><a href="#sobre-mim" class="hover:text-gold-400 transition">Sobre Mim</a></li>
+                        <li><a href="#catalogo" class="hover:text-gold-400 transition">Serviços & Peças</a></li>
+                        <li><a href="#como-funciona" class="hover:text-gold-400 transition">Como Funciona</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div>
+                    <h4 class="font-serif text-white font-bold text-sm mb-4 tracking-wider uppercase">Atendimento</h4>
+                    <ul class="space-y-2.5 text-xs text-slate-400">
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-location-dot text-gold-400"></i>
+                            <span>Rua José pestana, 195 - JD Maria Rosa, Taboão da Sera - SP</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>(11) 98492-1848</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Horário de Funcionamento -->
+                <div>
+                    <h4 class="font-serif text-white font-bold text-sm mb-4 tracking-wider uppercase">Horário de Funcionamento</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li class="flex justify-between border-b border-navy-900 pb-1">
+                            <span>Segunda a Sexta:</span>
+                            <span class="text-slate-200 font-semibold">09:00 - 18:00</span>
+
+                        </li>
+                        <li class="flex justify-between text-gold-400 font-semibold pt-1">
+                            <span>Atendimento presencial e imediato.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+                <p>&copy; 2026 Ateliê da Andreia. Todos os direitos reservados.</p>
+                <p class="text-[11px]">Ajustes e reformas com elegância e tradição.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%21" class="whatsapp-floating" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco no WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <!-- JAVASCRIPT DO ATELIÊ -->
+    <script>
+        // --- BASE DE DADOS DOS SERVIÇOS REFORMULADA ---
+        const services = [
+            // BAINHAS
+            {
+                id: 1,
+                name: "Bainha Original em Calça Jeans",
+                category: "Bainhas",
+                price: "A partir de R$ 35,00",
+                description: "Preserva o acabamento e lavagem original da barra do jeans. Ajuste discreto e perfeito para manter o estilo da calça.",
+                image: "IMG/IMG%201.jpeg"
+            },
+            {
+                id: 2,
+                name: "Bainha Invisível (Social & Vestidos)",
+                category: "Bainhas",
+                price: "A partir de R$ 40,00",
+                description: "Feita manualmente ou na galoneira com fios de seda sem marcas visíveis pelo lado de fora. Ideal para alfaiataria e vestidos.",
+                image: "IMG/IMG2.jpeg"
+            },
+            
 
-    <script src="script.js"></script>
+            // ZÍPERES
+            {
+                id: 4,
+                name: "Troca de Zíper Invisível em Vestido / Saia",
+                category: "Zíperes",
+                price: "A partir de R$ 35,00",
+                description: "Substituição completa do zíper travado ou quebrado por zíper invisível de alta resistência, combinando com a cor da peça.",
+                image: "IMG/IMG3.jpeg"
+            },
+            {
+                id: 5,
+                name: "Troca de Zíper de Jaqueta & Casaco",
+                category: "Zíperes",
+                price: "A partir de R$ 55,00",
+                description: "Aplicação de zíper tratorado, metálico ou reforçado destacável para jaquetas de couro, jeans, moletom e casacos de frio.",
+                image: "IMG/IMG4.jpeg"
+            },
+
+            // AJUSTES EM GERAL
+        
+            
+
+        ];
+
+        let activeCategory = 'Todos';
+        let currentSlide = 0;
+        let slideInterval;
+        let selectedService = '';
+
+        // --- RENDERIZAR PRODUTOS/SERVIÇOS ---
+        function renderCatalog() {
+            const grid = document.getElementById('catalogGrid');
+            const filtered = activeCategory === 'Todos' 
+                ? services 
+                : services.filter(s => s.category === activeCategory);
+
+            grid.innerHTML = filtered.map(item => `
+                <div class="group bg-white dark:bg-navy-900 border border-navy-100 dark:border-navy-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-[4/3] bg-slate-100 dark:bg-navy-950">
+                            <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <span class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-navy-900 text-gold-400 border border-gold-400/30 shadow-md">
+                                ${item.category}
+                            </span>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="font-serif font-bold text-lg text-slate-900 dark:text-slate-100 group-hover:text-gold-600 dark:group-hover:text-gold-400 transition">${item.name}</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 mt-2 font-light leading-relaxed">${item.description}</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 pt-0 flex items-center justify-between gap-2 border-t border-slate-100 dark:border-navy-800/60 mt-2">
+                        <div>
+                            <span class="text-[10px] text-slate-400 block">Estimativa</span>
+                            <span class="text-sm font-bold text-navy-900 dark:text-gold-400">${item.price}</span>
+                        </div>
+                        <button onclick="openModal('${item.name}')" class="bg-navy-900 hover:bg-navy-800 dark:bg-gold-500 dark:hover:bg-gold-400 text-white dark:text-navy-950 px-4 py-2.5 rounded-xl transition text-xs font-bold tracking-wider uppercase shadow-md flex items-center gap-1.5">
+                            <i class="fa-solid fa-calendar-plus text-xs"></i>
+                            <span>Solicitar</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // --- FILTROS DE CATEGORIA ---
+        function filterCategory(category) {
+            activeCategory = category;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.textContent.includes(category) || (category === 'Todos' && btn.textContent === 'Todos')) {
+                    btn.className = 'category-btn active px-5 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-navy-900 text-white dark:bg-gold-500 dark:text-navy-950 transition';
+                } else {
+                    btn.className = 'category-btn px-5 py-2 rounded-full text-xs font-semibold whitespace-nowrap bg-slate-200 dark:bg-navy-800 text-slate-700 dark:text-slate-300 hover:bg-navy-100 transition';
+                }
+            });
+            renderCatalog();
+        }
+
+        // --- CARROSSEL HERO ---
+        function updateCarousel() {
+            const slides = document.getElementById('carouselSlides');
+            const dots = document.querySelectorAll('#carouselDots button');
+
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.className = 'w-8 h-2 rounded-full bg-gold-500 transition-all duration-300';
+                } else {
+                    dot.className = 'w-2 h-2 rounded-full bg-white/40 transition-all duration-300';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % 3;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + 3) % 3;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        function startAutoPlay() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(slideInterval);
+        }
+
+        // --- MODAL DE SOLICITAÇÃO ---
+        function openModal(serviceName) {
+            selectedService = serviceName;
+            document.getElementById('modalTitle').textContent = `Agendar: ${serviceName}`;
+            document.getElementById('serviceModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('serviceModal').classList.add('hidden');
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const date = document.getElementById('clientDate').value;
+            const details = document.getElementById('clientDetails').value;
+
+            const text = `Olá! Gostaria de agendar um orçamento no Ateliê da Andreia.\n\n` +
+                         `*Serviço:* ${selectedService}\n` +
+                         `*Nome:* ${name}\n` +
+                         `*Telefone:* ${phone}\n` +
+                         `*Data Preferencial:* ${date}\n` +
+                         `*Detalhes:* ${details}`;
+
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/5511984921848?text=${encodedText}`, '_blank');
+            closeModal();
+            document.getElementById('appointmentForm').reset();
+        }
+
+        // --- MODO ESCURO / CLARO ---
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon text-lg';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-lg text-amber-400';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('themeIcon');
+
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-sun text-lg text-amber-400';
+            } else {
+                document.documentElement.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-moon text-lg';
+            }
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        }
+
+        // --- INICIALIZAÇÃO DA PÁGINA ---
+        window.addEventListener('DOMContentLoaded', () => {
+            initTheme();
+            renderCatalog();
+            startAutoPlay();
+
+            // Pausar carrossel no hover
+            const carouselContainer = document.getElementById('heroCarouselContainer');
+            carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+            carouselContainer.addEventListener('mouseleave', startAutoPlay);
+        });
+    </script>
 </body>
 </html>
