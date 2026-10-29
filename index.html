@@ -130,62 +130,24 @@
         </div>
     </header>
 
-    <!-- CARROSSEL HERO PROMOCIONAL -->
+    <!-- DESTAQUE PRINCIPAL -->
     <section id="home" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-        <div class="relative overflow-hidden rounded-3xl bg-navy-900 text-white min-h-[420px] sm:min-h-[500px] shadow-2xl flex items-center" id="heroCarouselContainer">
-            
-            <!-- Slides Container -->
-            <div id="carouselSlides" class="relative w-full h-full flex transition-transform duration-700 ease-in-out">
-                
-                <!-- Slide 1 -->
-                <div class="min-w-full relative flex flex-col md:flex-row items-center justify-between p-8 sm:p-14 lg:p-16 gap-8">
-                    <div class="z-10 max-w-2xl space-y-4 text-center md:text-left">
-                        <span class="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-400/30 text-xs font-semibold tracking-widest uppercase">
-                            <i class="fa-solid fa-crown mr-1"></i> Ajustes Exclusivos
-                        </span>
-                        <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">Ajustes & Reformas para Cada Peça</h2>
-                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">Customização, barras, pence e retoques delicados para deixar suas roupas com o caimento perfeito e o visual renovado.</p>
-                        <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
-                            <button onclick="openModal('Ajustes e Reformas')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider">Solicitar Orçamento</button>
-                            <a href="#catalogo" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3 rounded-full transition text-xs uppercase tracking-wider">Ver Serviços</a>
-                        </div>
-                    </div>
-                    <div class="z-10 w-52 sm:w-72 lg:w-96 flex-shrink-0">
-                        <img src="IMG/carrosesel.jpeg" alt="Ajustes e reformas de roupas" class="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-2xl border border-white/10">
+        <div class="relative overflow-hidden rounded-3xl bg-navy-900 text-white min-h-[420px] sm:min-h-[500px] shadow-2xl flex items-center">
+            <div class="w-full flex flex-col md:flex-row items-center justify-between p-8 sm:p-14 lg:p-16 gap-8">
+                <div class="z-10 max-w-2xl space-y-4 text-center md:text-left">
+                    <span class="inline-block px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-400/30 text-xs font-semibold tracking-widest uppercase">
+                        <i class="fa-solid fa-crown mr-1"></i> Ajustes Exclusivos
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">Ajustes & Reformas para Cada Peça</h2>
+                    <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">Customização, barras, pence e retoques delicados para deixar suas roupas com o caimento perfeito e o visual renovado.</p>
+                    <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <button onclick="openModal('Ajustes e Reformas')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider">Solicitar Orçamento</button>
+                        <a href="#catalogo" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3 rounded-full transition text-xs uppercase tracking-wider">Ver Serviços</a>
                     </div>
                 </div>
-
-                <!-- Slide 2 -->
-                <div class="min-w-full relative flex flex-col md:flex-row items-center justify-between p-8 sm:p-14 lg:p-16 gap-8 bg-navy-950">
-                    <div class="z-10 max-w-2xl space-y-4 text-center md:text-left">
-                        <span class="inline-block px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/30 text-xs font-semibold tracking-widest uppercase">
-                            <i class="fa-solid fa-scissors mr-1"></i> Ajustes Impecáveis
-                        </span>
-                        <h2 class="text-3xl sm:text-5xl font-serif font-bold leading-tight">Reforma e Ajuste Fino de Roupas</h2>
-                        <p class="text-slate-300 text-sm sm:text-base font-light leading-relaxed">Ajustes de barras, ternos, camisaria e renovação de peças especiais com técnicas tradicionais de costura alfaiataria.</p>
-                        <div class="pt-2 flex flex-wrap gap-4 justify-center md:justify-start">
-                            <button onclick="openModal('Ajustes & Reformas')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-7 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider">Agendar Prova</button>
-                            <a href="#catalogo" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold px-7 py-3 rounded-full transition text-xs uppercase tracking-wider">Ver Serviços</a>
-
-                            
-                        </div>
-                    </div>
-                    <div class="z-10 w-52 sm:w-72 lg:w-96 flex-shrink-0">
-                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Ateliê de Costura" class="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-2xl border border-white/10">
-
-            <!-- Botões Laterais -->
-            <button onclick="prevSlide()" aria-label="Slide Anterior" class="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-navy-900 text-white flex items-center justify-center backdrop-blur-sm border border-white/20 transition z-20">
-                <i class="fa-solid fa-chevron-left text-sm"></i>
-            </button>
-            <button onclick="nextSlide()" aria-label="Próximo Slide" class="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-black/40 hover:bg-navy-900 text-white flex items-center justify-center backdrop-blur-sm border border-white/20 transition z-20">
-                <i class="fa-solid fa-chevron-right text-sm"></i>
-            </button>
-
-            <!-- Indicadores Inferiores -->
-            <div id="carouselDots" class="absolute bottom-5 left-1/2 -translate-x-1/2 flex space-x-2.5 z-20">
-                <button onclick="goToSlide(0)" class="w-8 h-2 rounded-full bg-gold-500 transition-all"></button>
-                <button onclick="goToSlide(1)" class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
-                <button onclick="goToSlide(2)" class="w-2 h-2 rounded-full bg-white/40 transition-all"></button>
+                <div class="z-10 w-52 sm:w-72 lg:w-96 flex-shrink-0">
+                    <img src="IMG/carrosesel.jpeg" alt="Ajustes e reformas de roupas" class="w-full h-72 sm:h-96 object-cover rounded-2xl shadow-2xl border border-white/10">
+                </div>
             </div>
         </div>
     </section>
@@ -266,10 +228,10 @@
                     </div>
 
                     <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4">
-                        <button onclick="openModal('Atendimento Personalizado')" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-6 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider flex items-center gap-2">
+                        <a href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20Andreia!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20ajustes%20e%20reformas." target="_blank" rel="noopener noreferrer" class="bg-gold-500 hover:bg-gold-400 text-navy-950 font-bold px-6 py-3 rounded-full transition shadow-lg text-xs uppercase tracking-wider flex items-center gap-2">
                             <i class="fa-brands fa-whatsapp text-base"></i>
                             <span>Falar Comigo no WhatsApp</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -416,15 +378,11 @@
                     
                     <!-- Redes Sociais Clicáveis -->
                     <div class="flex items-center gap-3 pt-2">
-                        <a href="https://www.instagram.com/mariaandreia-sil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Ateliê" 
+                        <a href="https://www.instagram.com/mariaandreiada_sil/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @mariaandreiada_sil" 
                             class="w-9 h-9 rounded-full bg-navy-900 hover:bg-gold-500 text-slate-300 hover:text-navy-950 flex items-center justify-center transition shadow-md">
                             <i class="fa-brands fa-instagram text-base"></i>
                         </a>
-                        <a href="https://www.facebook.com/MariaAndreiaSilva" target="_blank" rel="noopener noreferrer" aria-label="Facebook do Ateliê" 
-                            class="w-9 h-9 rounded-full bg-navy-900 hover:bg-blue-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow-md">
-                            <i class="fa-brands fa-facebook-f text-base"></i>
-                        </a>
-                        <a href="https://wa.me/5511984921848" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Ateliê" 
+                        <a href="https://wa.me/5511984921848?text=Ol%C3%A1%2C%20Andreia!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp do Ateliê" 
                             class="w-9 h-9 rounded-full bg-navy-900 hover:bg-emerald-600 text-slate-300 hover:text-white flex items-center justify-center transition shadow-md">
                             <i class="fa-brands fa-whatsapp text-base"></i>
                         </a>
@@ -490,7 +448,7 @@
                 id: 1,
                 name: "Bainha Original em Calça Jeans",
                 category: "Bainhas",
-                price: "A partir de R$ 35,00",
+                price: " R$ 25,00",
                 description: "Preserva o acabamento e lavagem original da barra do jeans. Ajuste discreto e perfeito para manter o estilo da calça.",
                 image: "IMG/IMG%201.jpeg"
             },
@@ -498,7 +456,7 @@
                 id: 2,
                 name: "Bainha Invisível (Social & Vestidos)",
                 category: "Bainhas",
-                price: "A partir de R$ 40,00",
+                price: "R$ 25,00",
                 description: "Feita manualmente ou na galoneira com fios de seda sem marcas visíveis pelo lado de fora. Ideal para alfaiataria e vestidos.",
                 image: "IMG/IMG2.jpeg"
             },
@@ -509,7 +467,7 @@
                 id: 4,
                 name: "Troca de Zíper Invisível em Vestido / Saia",
                 category: "Zíperes",
-                price: "A partir de R$ 35,00",
+                price: "R$ 28,00",
                 description: "Substituição completa do zíper travado ou quebrado por zíper invisível de alta resistência, combinando com a cor da peça.",
                 image: "IMG/IMG3.jpeg"
             },
@@ -517,7 +475,7 @@
                 id: 5,
                 name: "Troca de Zíper de Jaqueta & Casaco",
                 category: "Zíperes",
-                price: "A partir de R$ 55,00",
+                price: "A partir de R$ 35,00",
                 description: "Aplicação de zíper tratorado, metálico ou reforçado destacável para jaquetas de couro, jeans, moletom e casacos de frio.",
                 image: "IMG/IMG4.jpeg"
             },
@@ -529,8 +487,6 @@
         ];
 
         let activeCategory = 'Todos';
-        let currentSlide = 0;
-        let slideInterval;
         let selectedService = '';
 
         // --- RENDERIZAR PRODUTOS/SERVIÇOS ---
@@ -582,45 +538,6 @@
             renderCatalog();
         }
 
-        // --- CARROSSEL HERO ---
-        function updateCarousel() {
-            const slides = document.getElementById('carouselSlides');
-            const dots = document.querySelectorAll('#carouselDots button');
-
-            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-            dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.className = 'w-8 h-2 rounded-full bg-gold-500 transition-all duration-300';
-                } else {
-                    dot.className = 'w-2 h-2 rounded-full bg-white/40 transition-all duration-300';
-                }
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % 3;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + 3) % 3;
-            updateCarousel();
-        }
-
-        function goToSlide(index) {
-            currentSlide = index;
-            updateCarousel();
-        }
-
-        function startAutoPlay() {
-            slideInterval = setInterval(nextSlide, 5000);
-        }
-
-        function stopAutoPlay() {
-            clearInterval(slideInterval);
-        }
-
         // --- MODAL DE SOLICITAÇÃO ---
         function openModal(serviceName) {
             selectedService = serviceName;
@@ -647,7 +564,7 @@
                          `*Detalhes:* ${details}`;
 
             const encodedText = encodeURIComponent(text);
-            window.open(`https://wa.me/5511984921848?text=${encodedText}`, '_blank');
+            window.location.href = `https://wa.me/5511984921848?text=${encodedText}`;
             closeModal();
             document.getElementById('appointmentForm').reset();
         }
@@ -689,12 +606,6 @@
         window.addEventListener('DOMContentLoaded', () => {
             initTheme();
             renderCatalog();
-            startAutoPlay();
-
-            // Pausar carrossel no hover
-            const carouselContainer = document.getElementById('heroCarouselContainer');
-            carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-            carouselContainer.addEventListener('mouseleave', startAutoPlay);
         });
     </script>
 </body>
